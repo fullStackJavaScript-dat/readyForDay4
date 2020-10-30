@@ -40,8 +40,8 @@ export default class UserFacade {
     throw new Error("Not Implemented")
   }
   //static async getAllUsers(): Promise<Array<IGameUser>> {
-  static async getAllUsers(): Promise<Array<any>> {
-    const users = await userCollection.find({}).toArray()
+  static async getAllUsers(proj?: object): Promise<Array<any>> {
+    const users = await userCollection.find({}, { projection: proj }).toArray()
 
     return users;
   }
