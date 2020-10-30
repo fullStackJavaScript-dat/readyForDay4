@@ -4,13 +4,15 @@ CONNECTION=YOUR_CONNECTION_STRING_TO_ATLAS
 
 DB_NAME=semester_case
 
-#SKIP_AUTHENTICATION=true
+PORT=5555
+
+DEBUG=game-project,facade-no-db,facade-with-db,facade-with-db:test,user-endpoint,user-endpoint-test,db-setup
+
+SKIP_AUTHENTICATION=true
 
 USE_USER_DB_FACADE_FOR_AUTHENTICATION=true
 
-PORT=5555
-
-DEBUG=game-project
+MOCHA_TIMEOUT=5000
 
 ## HINTS
 
