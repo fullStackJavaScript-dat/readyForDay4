@@ -20,7 +20,7 @@ export async function getConnectedClient() {
 export async function closeConnection() {
   if (connected) {
     connected = false;
-    await client.connect();
+    await client.close();
     debug("######## Connection Closed ###########")
   }
 }
